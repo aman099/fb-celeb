@@ -1,0 +1,105 @@
+:root {
+  --primary-color: #e3d3d7;
+  --secondary-color: #b86b77;
+  --secondary-dark-color: #b86b77c7;
+}
+
+.navigation-container {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3d3d7;
+}
+
+.navigation-container.sticky {
+  position: sticky;
+  z-index: 1000000000000000;
+  top: 0;
+  left: 0;
+}
+
+.navigation-container .icons .icons-container {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  /* padding-left: 20px; */
+  margin-left: 20px;
+}
+
+.navigation-container .icons .icons-container .icon {
+  display: grid;
+  place-items: center;
+  background-color: var(--secondary-color);
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  transition: all 0.2s ease;
+}
+
+.navigation-container .icons .icons-container .icon:hover {
+  cursor: pointer;
+  background-color: var(--secondary-dark-color);
+}
+
+.navigation-container .icons .icons-container .icon i {
+  color: var(--primary-color);
+}
+
+.navigation-container .logo .logo-container img {
+  height: 60px;
+}
+
+.navigation-container .menu .menu-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.4rem;
+  padding: 40px;
+}
+
+.navigation-container .menu .menu-container h4 {
+  font-weight: 200;
+}
+
+.navigation-container .menu .menu-container .menu-icon i:hover {
+  color: #fff;
+  cursor: pointer;
+}
+.navigation-container .menu .menu-container .menu-icon i:active {
+  color: var(--secondary-color);
+}
+
+/* MEDIA-QUERIES */
+@media only screen and (max-width: 700px) {
+  .navigation-container .logo .logo-container {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navigation-container .icons .icons-container {
+    gap: 2px;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .navigation-container {
+    padding: 20px 10px;
+  }
+  .navigation-container .logo .logo-container img {
+    height: 40px;
+  }
+  .navigation-container .menu .menu-container {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navigation-container .logo .logo-container img {
+    display: none;
+  }
+}

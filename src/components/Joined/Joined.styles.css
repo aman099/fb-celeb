@@ -1,0 +1,368 @@
+:root {
+  --primary-color: #e3d3d7;
+  --secondary-color: #b86b77;
+  --secondary-dark-color: #b86b77c7;
+  --secondary-darker-color: #603135;
+  --white: #fff;
+  --yellowish: #d3b565;
+}
+
+.joined .joined-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--primary-color);
+  padding-top: 100px;
+}
+
+.joined .joined-container .right-joined {
+  text-align: right;
+}
+
+.joined .joined-container .right-joined img {
+  width: 80%;
+}
+
+.joined .joined-container .right-joined .img-container {
+  position: relative;
+  z-index: 0;
+}
+.joined .joined-container .right-joined .img-container::before {
+  border: 2px solid var(--yellowish);
+  content: "";
+  position: absolute;
+  /* width: 661px;
+  height: 460px; */
+  width: 85%;
+  height: 95%;
+  left: 100px;
+  margin: -15px 0;
+  top: 70px;
+  z-index: -1;
+}
+
+.joined .joined-container .right-joined .live-concert-img-container {
+  position: relative;
+  text-align: left;
+  z-index: 0;
+}
+.joined .joined-container .right-joined .live-concert-img-container::before {
+  border: 2px solid var(--yellowish);
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 95%;
+  left: 0px;
+  margin: -15px 0;
+  top: 70px;
+  z-index: -1;
+}
+
+.joined .joined-container .right-joined .corporate-img-container {
+  position: relative;
+  z-index: 0;
+}
+.joined .joined-container .right-joined .corporate-img-container::before {
+  border: 2px solid var(--yellowish);
+  content: "";
+  position: absolute;
+  width: 85%;
+  height: 95%;
+  left: 100px;
+  margin: -15px 0;
+  top: 70px;
+  z-index: -1;
+}
+
+.joined .joined-container .left-joined {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.joined .joined-container .left-joined h2 {
+  color: var(--secondary-darker-color);
+  font-family: "PlayfairDisplayItalic";
+  font-size: 66px;
+  text-align: center;
+}
+
+.joined .joined-container .left-joined .corp-heading {
+  margin-left: 40px;
+}
+
+.joined .joined-container .left-joined h3 {
+  color: var(--white);
+  font-family: "Work Sans";
+  font-size: 90px;
+  line-height: 24px;
+  margin-left: 50px;
+}
+
+.joined .joined-container .left-joined::before {
+  content: url("../../assets/img/blurred-2.png");
+  position: absolute;
+  top: 160px;
+  left: -120px;
+}
+
+.joined .joined-container .left-joined .dotted {
+  position: relative;
+}
+
+.joined .joined-container .left-joined .dotted::before {
+  content: url("../../assets/img/dotline.png");
+  position: absolute;
+  right: 360px;
+  top: 25%;
+  z-index: 8;
+}
+
+.joined .joined-container .left-joined .right-dotted::before {
+  position: absolute;
+  content: url("../../assets/img/dotline (cropped).png");
+  right: 0px;
+  top: 33%;
+  transform: rotateY(180deg);
+  z-index: 8;
+}
+
+.joined .joined-container .left-joined .left-dotted::before {
+  content: url("../../assets/img/dotline (cropped).png");
+  position: absolute;
+  right: 425px;
+  top: 25%;
+  z-index: 8;
+}
+
+.joined-end {
+  padding-bottom: 160px;
+  background-color: var(--primary-color);
+}
+
+/* MEDIA-QUERIES */
+@media only screen and (max-width: 1600px) {
+  /* .joined .joined-container .left-joined .right-dotted::before {
+    opacity: 0.6;
+  } */
+}
+
+@media only screen and (min-width: 1351px) and (max-width: 1400px) {
+  .joined .joined-container .right-joined .social-celeb-img-container::before {
+    width: 85%;
+    height: 95%;
+  }
+  .joined .joined-container .right-joined .live-concert-img-container::before {
+    width: 85%;
+    height: 95%;
+    left: 0px;
+  }
+  .joined .joined-container .right-joined .corporate-img-container::before {
+    width: 85%;
+    height: 95%;
+  }
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 1351px) {
+  .joined .joined-container .right-joined .social-celeb-img-container::before {
+    width: 85%;
+    height: 95%;
+    left: 100px;
+  }
+  .joined .joined-container .right-joined .live-concert-img-container::before {
+    width: 85%;
+    height: 95%;
+  }
+
+  .joined .joined-container .right-joined .corporate-img-container::before {
+    width: 85%;
+    height: 95%;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  /* Joined Section */
+  .joined .joined-container .right-joined .social-celeb-img-container::before {
+    width: 85%;
+    height: 95%;
+    left: 100px;
+  }
+  .joined .joined-container .right-joined .live-concert-img-container::before {
+    width: 85%;
+    height: 95%;
+  }
+
+  .joined .joined-container .right-joined .corporate-img-container::before {
+    width: 85%;
+    height: 95%;
+    left: 100px;
+  }
+
+  .joined .joined-container .left-joined .right-dotted::before {
+    content: url("../../assets/img/dotline (cropped-2).png");
+    top: 30%;
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 1231px) {
+  /* Joined section */
+  .joined .joined-container .right-joined .social-celeb-img-container::before {
+    width: 82%;
+  }
+  .joined .joined-container .right-joined .live-concert-img-container::before {
+    width: 86%;
+    height: 90%;
+  }
+
+  .joined .joined-container .right-joined .corporate-img-container::before {
+    width: 82%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  /* Joined section */
+  .joined .joined-container .right-joined .social-celeb-img-container::before {
+    width: 87%;
+    height: 95%;
+    left: 12%;
+  }
+
+  .joined .joined-container .right-joined .corporate-img-container::before {
+    width: 87%;
+    height: 95%;
+    left: 12%;
+  }
+
+  .joined .joined-container .left-joined .right-dotted::before {
+    right: 5px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  /* Joined section */
+  .joined .joined-container .left-joined h2 {
+    margin-left: 80px;
+  }
+  .joined .joined-container .left-joined h2 {
+    font-size: 60px;
+    margin-right: 130px;
+  }
+  .joined .joined-container .left-joined h3 {
+    font-size: 80px;
+    margin-right: 30px;
+  }
+
+  .joined .joined-container .left-joined .right-dotted::before {
+    /* opacity: 0.1; */
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  /* Joined section */
+  .joined .joined-container .text-container h2 {
+    font-size: 50px;
+  }
+  .joined .joined-container .text-container h3 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  /* Joined section */
+  .joined .joined-container .left-joined .social-celeb-dotted::before {
+    right: 265px;
+  }
+
+  .joined .joined-container .left-joined .text-container {
+    text-align: center;
+  }
+  .joined .joined-container .left-joined .text-container .corp-heading {
+    margin-right: 0;
+  }
+
+  .joined .joined-container .left-joined .right-dotted::before {
+    content: url("../../assets/img/dotline (cropped-2).png");
+    right: 0px;
+    top: 21px;
+  }
+
+  .joined .joined-container .left-joined .left-dotted::before {
+    left: -500px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /* No styles given for joined' */
+}
+
+@media only screen and (max-width: 802px) {
+  /* No styling given for joined */
+}
+
+@media only screen and (max-width: 700px) {
+  /* Joined section */
+  .joined .joined-container .left-joined .right-dotted::before {
+    right: 11px;
+    top: 21px;
+  }
+  .joined .joined-container .right-joined .img-container::before {
+    display: none;
+  }
+  .joined .joined-container .right-joined img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  /* Joined section */
+  .joined .joined-container {
+    flex-direction: column-reverse;
+    gap: 20px;
+    padding: 20px;
+  }
+  .joined-middle .joined-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .joined .joined-container .right-joined .img-container {
+    border-radius: 20px;
+  }
+  .joined .joined-container .right-joined .img-container img {
+    border-radius: 20px;
+    border: 10px solid var(--yellowish);
+    box-shadow: 4px 4px 59px -16px rgba(0, 0, 0, 0.71);
+  }
+
+  .joined .joined-container .text-container h2,
+  .joined .joined-container .text-container h3 {
+    font-size: 40px;
+    margin: 0 auto;
+  }
+
+  .joined .joined-container .left-joined::before {
+    display: none;
+  }
+
+  .joined .joined-container .left-joined .social-celeb-dotted::before,
+  .joined .joined-container .left-joined .right-dotted::before,
+  .joined .joined-container .left-joined .left-dotted::before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  /* No styles given */
+}
+
+@media only screen and (max-width: 350px) {
+  .joined .joined-container .text-container h2,
+  .joined .joined-container .text-container h3 {
+    font-size: 30px;
+  }
+}

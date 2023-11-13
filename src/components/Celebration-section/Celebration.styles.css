@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #e3d3d7;
+  --secondary-color: #b86b77;
+  --secondary-dark-color: #b86b77c7;
+  --secondary-darker-color: #603135;
+}
+
+/* CELEBRATIONS SECTION */
+
+.celeb {
+  position: relative;
+  overflow: hidden;
+}
+
+.blurred-logo::before {
+  content: url("../../assets/img/celbg-blurred.png");
+  position: absolute;
+  right: -190px;
+  top: 8%;
+  z-index: 99;
+  overflow-x: hidden;
+}
+
+.celeb .celeb-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  background-color: #e3d3d7;
+  color: var(--secondary-darker-color);
+  padding: 50px 0;
+}
+
+.celeb .celeb-container .celeb-title h2 {
+  font-size: 80px;
+  font-weight: 100;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 2s ease-in-out;
+}
+.celeb .celeb-container .celeb-title h2.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.celeb .celeb-container .celeb-para {
+  width: 57.5rem;
+  font-size: 18px;
+  font-family: "AthitiRegular";
+  line-height: 40px;
+  opacity: 0;
+  transform: translateY(20%);
+  transition: all 2s ease-in-out;
+}
+.celeb .celeb-container .celeb-para.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MEDIA-QUERIES */
+@media only screen and (max-width: 1100px) {
+  .celeb .celeb-container .celeb-title h2 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .celeb .celeb-container {
+    gap: 16px;
+  }
+
+  .celeb .celeb-container .celeb-para {
+    width: 52.5rem;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+@media only screen and (max-width: 802px) {
+  .celeb .celeb-container .celeb-para {
+    width: 38.5rem;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .celeb .celeb-container {
+    gap: 10px;
+    padding: 20px 0;
+  }
+  .celeb .celeb-container .celeb-title h2 {
+    font-size: 48px;
+  }
+  .celeb .celeb-container .celeb-para {
+    width: 24.5rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .celeb .celeb-container .celeb-para {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .celeb .celeb-container .celeb-title h2 {
+    font-size: 32px;
+  }
+}

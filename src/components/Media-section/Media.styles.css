@@ -1,0 +1,113 @@
+:root {
+  --primary-color: #e3d3d7;
+  --secondary-color: #b86b77;
+  --secondary-dark-color: #b86b77c7;
+  --secondary-darker-color: #603135;
+  --white: #fff;
+  --yellowish: #d3b565;
+}
+
+.media .media-container {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  overflow: hidden;
+}
+
+.media .media-container .media-title {
+  text-align: center;
+}
+
+.media .media-container .media-title h2 {
+  font-size: 66px;
+  font-family: "PlayfairDisplayItalic";
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+  /*  */
+  opacity: 0;
+  transform: scale(0);
+  transition: all 2s ease-in-out;
+}
+.media .media-container .media-title h2.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.media-logos {
+  position: relative;
+}
+
+/* .media-logos::before,
+  .media-logos::after {
+    content: "BABATUNDE";
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    z-index: 20000000000000000000000000000000000000000;
+  } */
+
+.media-logos::before {
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgb(255, 255, 255),
+    var(--secondary-color)
+  );
+}
+.media-logos::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), RED);
+}
+
+.media-logos .media-logos-container {
+  white-space: nowrap;
+  padding: 40px;
+  display: inline-block;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.media-logos .media-logos-container.animate {
+  opacity: 1;
+  animation: slide 30s infinite linear;
+}
+
+.media-logos:hover .media-logos-container {
+  animation-play-state: paused;
+}
+
+.media-logos .media-logos-container .logo {
+  padding: 40px;
+  white-space: nowrap;
+}
+
+.media-logos .media-logos-container .logo img {
+  height: 50px;
+}
+
+/* Logos slide */
+@keyframes slide {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+/* MEDIA-QUERIES */
+@media only screen and (max-width: 1200px) {
+  .media-logos .media-logos-container .logo img {
+    height: 40px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .media .media-container .media-title h2.visible {
+    font-size: 36px;
+  }
+}
